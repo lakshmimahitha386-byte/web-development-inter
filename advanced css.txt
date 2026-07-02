@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahitha Portfolio</title>
+  <meta name="description" content="Frontend Developer Portfolio">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Mahitha</h2>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button onclick="toggleTheme()">🌓</button>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div>
+      <h1>Hello, I'm Mahitha</h1>
+      <p>Frontend Developer | AI & ML Student</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <article class="card">Project 1</article>
+    <article class="card">Project 2</article>
+    <article class="card">Project 3</article>
+    <article class="card">Project 4</article>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <form>
+      <label>Name</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Message</label>
+      <textarea required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+</main>
+
+<script>
+function toggleTheme() {
+  const root = document.documentElement;
+  const current = root.getAttribute("data-theme");
+
+  root.setAttribute(
+    "data-theme",
+    current === "light" ? "dark" : "light"
+  );
+}
+</script>
+
+</body>
+</html>
